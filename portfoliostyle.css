@@ -1,0 +1,1020 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+.container{
+    max-width: 1200px;
+    /* top and bottom se 0 margin and left right se auto */
+    margin: 0,auto;
+    /* background: linear-gradient(to top right, rgba(199, 177, 199, 0.676), white ); */
+}
+.navcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 150px;
+    background:linear-gradient(to right, white, lightgray);
+    width: 100vw;
+    height: 90px;
+     
+      
+}
+
+.logo{
+    position: relative;
+    display: flex;
+}
+.logoimg{
+    position: absolute;
+    bottom: -22px;
+    transform: rotateY(180deg);
+}
+.logotext{
+    position: absolute;
+    top: 0px;
+    left: 66px;
+    font-weight:900;
+    font-size: 60px;
+    font-family: 'Kalam', cursive;
+font-family: 'Lumanosimo', cursive;
+font-family: 'Qwitcher Grypen', cursive;
+   
+}
+.nav{
+    display: flex;
+    gap: 35px;
+    font-size: x-large;
+    position: relative;
+    top: 5px;
+    right: -5px;
+}
+.nav a{
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+a:hover{
+    font-weight: bold;
+    transition: font-weight 0.1s ease-out 0.1s;
+}
+.container2{
+    position: relative;
+}
+.herosection{
+    position: absolute;
+    top: 100px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 359px;
+}
+.section1{
+    padding: 30px;
+    display: inline;
+    position: relative;
+    top: 55px;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+
+}
+.section2{
+    position: relative;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1;
+}
+.mine{
+    position: absolute;
+    z-index: -1;
+    border: solid whitesmoke 30px;
+    animation: mine 4s ease-in-out infinite ;
+    
+}
+.zig{
+    position: absolute;
+    
+    z-index: 1;
+    animation: ziggy 4s ease-out infinite ;
+    
+}
+.dna{
+    position: absolute;
+    left: 250px;
+    top: 310px;
+    animation: dna 2s ease-out infinite ;
+}
+.cube{
+    position: absolute;
+    top: 310px;
+    left: -4px;
+    animation: cube 1s ease-out infinite ;
+}
+#intro{
+    color:royalblue;
+    font-weight: 550;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+ 
+}
+.top{
+    color:red;
+    text-shadow: #1f1f1f 1px 1px 2px;
+    font-size:50px;
+    position: relative;
+    right: 0px;
+    
+}
+@keyframes ziggy {
+    0%{
+        transform: translate(0px,0px);
+        transform: skew(0deg,0deg);
+    }
+    50%{
+        transform: translate(25px,25px);
+        /* transform: skew(20deg,20deg); */
+    }
+    100%{
+        transform: translate(-3px,50px);
+        /* transform: skew(20deg,20deg); */
+    }
+    
+}
+@keyframes cube{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+@keyframes dna{
+    0%{
+        transform: translate(0px,0px);
+        transform:perspective(10px) rotateZ(0deg);
+        transform: scale(-1);
+       
+        
+    }
+    100%{
+        transform: translate(3px,3px);
+        transform:perspective(10px) rotateZ(45deg);
+        transform: scale(1);
+        
+    }
+}
+@keyframes mine {
+    0%{
+        transform: scale(1);
+        filter: grayscale(100%);
+        box-shadow: 0px 0px 0px black;
+        
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(0%);
+        box-shadow: 3px 3px 4px black;
+        
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(100%);
+        box-shadow: 0px 0px 0px black;
+        
+    }
+    
+}
+.btn{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    box-shadow: 2px 2px 3px black;
+    width: fit-content;
+    z-index: 1;
+   transition: all 0.5s;
+    cursor: pointer;
+    border: solid 3px transparent;
+    bottom: 20px;
+
+ 
+}
+.btn::before{
+    content:"";
+    position: absolute;
+    background-color: white;
+   
+    top:0px;
+    bottom:0px;
+    left: 0px;
+    right:0px;
+    transform: scaleX(0);
+    transform-origin: left;
+    
+    
+    transition:all 0.8s;
+    z-index: -1;
+}
+.btn:hover::before{
+    transform: scaleX(1);
+}
+.btn:hover{
+    color: black;
+    border: solid 3px red;
+}
+.name{
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+   
+    font-size: 103px;
+    font-weight: bolder;
+    user-select: none;
+    color: lightgrey;
+    position: relative;
+    top: 499px;
+    left: 906px;
+    letter-spacing: 10px;
+    transition: all 4s;
+    
+
+    
+}
+/* 1st project  */
+.project-section{
+    position: relative;
+    top: 473px;
+    left: 3%;
+    background-color: lightgray;
+    
+    
+}
+.skills{
+    width: 40px ;
+}
+.projectcard{
+    background-image: url(./images/car.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    
+    gap: 90px;
+    box-shadow:0px 0px 40px #1f1f1f;
+    position: relative;
+    bottom: 62px;
+    
+    
+
+}
+.projectcard::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #1f1f1f9a;
+    
+}
+.projectcard::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s;
+
+}
+.projectcard:hover::before{
+    transform: scaleX(1);
+}
+.proheading{
+    font-size: 55px;
+    position: relative;
+    left: 35%;
+    color: red;
+    bottom: 52px;
+}
+.projectskills{
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 25px;
+    z-index: 1;
+    bottom: 275px;
+    
+}
+.project1para2{
+    color: white;
+    width: 400px;
+    z-index: 1;
+}
+.project1btn{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    bottom: 65px;
+    box-shadow: 2px 2px 3px black;
+    width: fit-content;
+    z-index: 1;
+   transition: all 0.5s;
+    cursor: pointer;
+    border: solid 3px transparent;
+
+ 
+}
+.project1btn::before{
+    content:"";
+    position: absolute;
+    background-color: white;
+   
+    top:0px;
+    bottom:0px;
+    left: 0px;
+    right:0px;
+    transform: scaleX(0);
+    transform-origin: left;
+    
+    
+    transition:all 0.8s;
+    z-index: -1;
+}
+.project1btn:hover::before{
+    transform: scaleX(1);
+}
+.project1btn:hover{
+    color: black;
+    border: solid 3px red;
+}
+.project1para1{
+    color: white;
+    z-index: 10;
+    position: absolute;
+    right: 435px;
+    top: 130px;
+}
+.projectnumber{
+    color: white;
+    font-weight: bolder;
+    font-size: 100px;
+    z-index: 1;
+    position: absolute;
+    left: 90%;
+    top: -10px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.projectcard:hover .projectnumber{
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all 0.3s;
+    
+}
+.projectcard:hover .projectskills{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+.projectcard:hover .project1para1{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+.projectcard:hover .project1para2{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+.projectcard:hover .project1btn{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+/* 2nd project  */
+
+.skills2{
+    width: 40px ;
+}
+.projectcard2{
+    background-image: url(./images/music.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 90px;
+    box-shadow:0px 0px 40px #1f1f1f;
+    position: relative;
+    bottom: 1px;
+    left: 10%;
+}
+.projectcard2::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #1f1f1f9a;
+}
+.projectcard2::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s;
+    
+
+}
+.projectcard2:hover::before{
+    transform: scaleX(1);
+}
+
+    
+    
+
+.projectskills2{
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    /* left: 25px; */
+    right: 25px;
+    z-index: 1;
+    bottom: 275px;
+    
+}
+.project2para2{
+    color: white;
+    width: 400px;
+    z-index: 1;
+    position: relative;
+    left: 29px;
+}
+.project2btn{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    bottom: 65px;
+    box-shadow: 2px 2px 3px black;
+    width: fit-content;
+    z-index: 1;
+   transition: all 0.5s;
+    cursor: pointer;
+    border: solid 3px transparent;
+
+ 
+}
+.project2btn::before{
+    content:"";
+    position: absolute;
+    background-color: white;
+   
+    top:0px;
+    bottom:0px;
+    left: 0px;
+    right:0px;
+    transform: scaleX(0);
+    transform-origin: left;
+    
+    
+    transition:all 0.8s;
+    z-index: -1;
+}
+.project2btn:hover::before{
+    transform: scaleX(1);
+}
+.project2btn:hover{
+    color: black;
+    border: solid 3px red;
+}
+.project2para1{
+    color: white;
+    z-index: 10;
+    position: absolute;
+    right: 396px;
+    top: 140px;
+}
+.projectnumber2{
+    color: white;
+    font-weight: bolder;
+    font-size: 100px;
+    z-index: 1;
+    position: absolute;
+    /* left: 90%; */
+    right: 90%;
+    top: -10px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.projectcard2:hover .projectnumber2{
+    opacity: 1;
+    transform: scale(1.5);
+    transition: all 0.3s;
+    
+}
+.projectcard2:hover .projectskills2{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+.projectcard2:hover .project2para1{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+.projectcard2:hover .project2para2{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+.projectcard2:hover .project2btn{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
+.skills-section{
+    position: relative;
+    top: 550px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.skills3{
+    width: 60px ;
+    position: absolute;
+    right: 290px;
+}
+.skills-subheading{
+    width: 440px;
+}
+.skills-images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 70px;
+    top: 90px;
+}
+.jav{
+    position: relative;
+    left: -220px;
+    bottom:146px
+}
+.ht{
+    position: relative;
+    left: -350px;
+    top: 8px;
+}
+.cs{
+    position: relative;
+    left: -350px;
+    top: 36px;
+}
+.mong{
+    position: relative;
+    left: -220px;
+    bottom:120px;
+}
+.reac{
+    position: relative;
+    left: -220px;
+    bottom:198px;
+}
+.db{
+    position: relative;
+    left: -350px;
+    top: 94px;
+    
+}
+.blob{
+    top: 100px;
+    left: -330px;
+    width: 150px;
+    animation: blob 8s ease-in-out infinite ;
+}
+@keyframes blob {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(22px ,22px);
+    }
+    50%{
+        transform: translate(0px ,0px);
+    }
+    75%{
+        transform: translate(-22px, -22px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+.skills-left{
+    margin: 30px;
+    position: relative;
+    left: 130px;
+
+}
+.skillheading::first-letter{
+    font-size: 100px;
+}
+.skillheading{
+    font-size: 50px;
+    color: red;
+    width: 350px;
+}
+.faded-text{
+    position: relative;
+    top: 530px;
+    font-size: 150px;
+    color: lightgray;
+    left: 900px;
+    user-select: none;
+    
+}
+.containerform{
+    width: 100%;
+    background-color: lightgray;
+    position: relative;
+    top: 491px;
+    
+}
+.formfield{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+    
+}
+#para2form{
+    text-transform: capitalize;
+}
+
+.form2{
+    width: 50%;
+    /* height: 42px; */
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    gap: 30px;
+    
+}
+#namesec{
+    height: 30px;
+}
+#emailsec{
+    height: 30px;
+}
+#subsec{
+    height: 30px;
+}
+#formheading{
+    margin-top: 30px;
+}
+.formbtn{
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    box-shadow: 2px 2px 3px black;
+    width: fit-content;
+    z-index: 1;
+    transition: all 0.5s;
+    cursor: pointer;
+    border: solid 3px transparent;
+}
+
+.formbtn::before{
+    content:"";
+    position: absolute;
+    background-color: white;
+   
+    top:0px;
+    bottom:0px;
+    left: 0px;
+    right:0px;
+    transform: scaleX(0);
+    transform-origin: left;
+    
+    
+    transition:all 0.8s;
+    z-index: -1;
+}
+.formbtn:hover::before{
+    transform: scaleX(1);
+}
+.formbtn:hover{
+    color: black;
+    border: solid 3px red;
+}
+
+#footer{
+    background: rgb(0,0,0);
+    background:linear-gradient(to bottom, white, lightgray);
+    width:100%;
+    padding:1.5% 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    top: 490px;
+}
+.footerlogo{
+    height:100%;
+    width:100%;
+    border-radius:45%;
+}
+#footer a{
+    width:10%;
+}
+.copyright{
+    font-size: 1.2rem;
+    color:black;
+}
+.social-links{
+    width: 10%;
+    display: flex;
+    gap: 2rem;
+}
+.footer-link{
+    font-size: 2rem;
+    color:black;
+    transition: all 0.6s;
+}
+.footer-link:hover{
+    transform: scale(1.2);
+   
+}
+
+@media(max-width:810px){
+    .navcontainer{
+        justify-content: start;
+        flex-direction: row;
+        gap: 220px;
+        flex-shrink:8;
+        
+        
+    }
+    .logo{
+        position: relative;
+        right: 50px;
+    }
+    .nav{
+        position: relative;
+        top: 20px;
+        right: 100px;
+
+    }
+    .herosection{
+        flex-direction: column;
+    }
+    .section1{
+        position: absolute;
+    }
+    .top{
+        width: 500px;
+        left: 50px;
+    }
+    .section2{
+        top: 400px;
+        left: 241px;
+    }
+    .project-section{
+        width: 750px;
+        top: 900px;
+        position: relative;
+        left: 22px;
+    }
+ .skills-section{
+    width: 750px;
+    top: 820px;
+    }
+    .containerform{
+        width: 810px;
+        top: 900px;
+    }
+    .form2{
+        width: 500px;
+    }
+    .formfield{
+     position: relative;
+     right: 200px;
+    }
+    .skills-subheading{
+        position: relative;
+        right: 130px;
+        top: 100px;
+    }
+    .skillheading{
+        position: relative;
+        right: 130px;
+        top: 100px;
+    }
+    .skills-images{
+        position: relative;
+        left: 210px;
+        top: 200px;
+    }
+    .project1para1{
+        left: 240px;
+        width: 300px;
+
+    }
+    .project2para1{
+        left: 200px;
+        width:300px;
+    }
+    .name{
+        width: 30px;
+        position: relative;
+        left: 417px;
+        top: 927px;
+    }
+    .proheading{
+        left: 1px;
+    }
+    .faded-text{
+        font-size: 100px;
+        left: 535px;
+        top: 925px;
+    }
+}
+@media(max-width:450px){
+    .navcontainer{
+        flex-direction: column-reverse;
+        width: 432px;
+        flex-shrink:8;
+        
+    }
+    .logo{
+        position: relative;
+        right: 130px;
+        bottom: 250px;
+        
+    }
+    .nav{
+        font-size:20px ;
+        gap: 12px;
+        left: 40px;
+        top: 23px;
+    }
+    .logoimg{
+        width: 40px;
+    }
+    .logotext{
+        font-size: 40px;
+        top: 18px;
+        left: 34px;
+    }
+
+    .nav{
+        width: 113px;
+    }
+    .herosection{
+        flex-direction: column;
+    }
+    .section1{
+        position: absolute;
+        width: 170px;
+        top: -100px;
+    }
+    .section2{
+        position: absolute;
+        display: flex;
+        justify-content: start;
+        left: 57px;
+        top: 260px;
+    }
+    .project-section{
+        width: 410px;
+        position: relative;
+        left: 9px;
+        top: 790px;
+    }
+    .proheading{
+        left: 1px;
+        font-size: 30px;
+        top: -55px;
+        
+    }
+    .projectcard{
+        width: fit-content;
+    }
+    .projectskills{
+        width:min-content;
+    }
+    .projectnumber{
+        font-size: 40px;
+        top:320px;
+    }
+    .project1para1{
+        left: 100px;
+    }
+   .projectcard2{
+    left: 0px;
+    width: 410px;
+    background-position: center;
+    background-size: cover;
+   }
+   .projectcard{
+    width: 410px;
+    background-position: center;
+    background-size: cover;
+   }
+   .project2para1{
+    left: 68px;
+   }
+   .projectnumber2{
+    font-size: 40px;
+        top:320px;
+   }
+   .skills-left{
+    left: 140px;
+   }
+   .skills-subheading{
+    width: 350px;
+   }
+   .skills-section{
+    display: flex;
+    flex-direction: column;
+    top: 700px;
+   }
+   .skills-images{
+    left: 110px;
+    top: 0px;
+   }
+   .blob{
+    position: relative;
+    left: -280px;
+    top: 220px;
+   }
+   .containerform{
+    width: 434px;
+    top: 600px;
+}
+.form2{
+    width: 250px;
+}
+.formfield{
+ position: relative;
+ right: 390px;
+}
+#para2form{
+    width: 400px;
+    position: relative;
+    left: 10px;
+}
+.faded-text{
+    font-size: 100px;
+    left: 200px;
+    top: 625px;
+}
+.name{
+    width: 5px;
+    font-size: 50px;
+    position: relative;
+    left: 225px;
+    top: 774px;
+}
+}
+
